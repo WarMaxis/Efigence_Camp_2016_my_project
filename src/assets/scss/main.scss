@@ -1,7 +1,11 @@
-@import "components/colors";
-@import "components/fonts";
-@import "components/variables";
+@import "colors";
+@import "fonts";
+@import "icons";
+@import "variables";
 
-@import "components/input";
-@import "components/header";
-@import "components/footer";
+@import "components/buttons";
+@import "components/form_elements";
+
+@import "pages/login/box";
+@import "pages/login/login";
+@import "pages/login/login_nav";
