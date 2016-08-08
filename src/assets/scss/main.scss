@@ -1,11 +1,14 @@
+// Główne style
 @import "colors";
 @import "fonts";
 @import "icons";
 @import "variables";
 
+// Komponenty
 @import "components/buttons";
 @import "components/form_elements";
 
+// Strona logowania
 @import "pages/login/box";
 @import "pages/login/login";
 @import "pages/login/login_nav";
