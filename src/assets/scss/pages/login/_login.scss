@@ -1,2 +1,178 @@
 // Strona logowania
+body,
+h1,
+h2 {
+	font-family: $font-stack;
+	color: $font-primary-color;
+	font-weight: $font-light;
+	text-align: center;
+}
 
+h1 {
+	font-size: 40px;
+	padding-top: 30px;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 15px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.main-container {
+	height: 100vh;
+	background-image: url("../img/background_login_page.jpg");
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.inner-container {
+	padding-top: 5vh;
+}
+
+.logo-container {
+	width: 160px;
+	height: 160px;
+	float: right;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	border-radius: 6px;
+}
+
+.login-box {
+	height: 88vh;
+	max-height: 620px;
+	position: relative;
+	background-color: $primary-background-color;
+	border-radius: 6px;
+}
+
+.login-space {
+	margin: 0px 5% 0px 5%;
+	padding: 65px 0 50px 0;
+	z-index: 1;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 6px;
+}
+
+.user-photo {
+	width: 94px;
+	height: 94px;
+	margin: 40px auto 0 auto;
+	position: relative;
+	top: 47px;
+	z-index: 2;
+	background-image: url("../img/user_photo.jpg");
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+}
+
+.login-number {
+	font-size: 18px;
+}
+
+#clear-login {
+	font-size: 12px;
+	cursor: pointer;
+	height: 22px;
+	width: 22px;
+	position: relative;
+	bottom: 2.5px;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 8px;
+}
+
+#keyboard-activate {
+	font-size: 28px;
+	cursor: pointer;
+	height: 39px;
+	max-width: 5%;
+	position: relative;
+	top: 2px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 10px;
+}
+
+#clear-login:hover,
+#keyboard-activate:hover {
+	color: $hover-color;
+}
+
+.password-input {
+	margin: 0px 5% 6px 5%;
+	input {
+		display: inline-block;
+		max-width: 90%;
+		border-radius: 3px;
+		font-size: 18px;
+		text-align: center;
+	}
+	input:focus {
+		outline: none;
+		border: 2px solid $hover-color;
+	}
+}
+
+.other-button {
+	text-transform: uppercase;
+	font-size: 15px;
+	margin-right: 8px;
+}
+
+.main-button {
+	color: $font-secondary-color;
+	background: $primary-buttons-color;
+	border: none;
+	width: 120px;
+	height: 30px;
+	border-radius: 3px;
+	margin-left: 8px;
+}
+
+.other-button:hover {
+	color: $hover-color;
+}
+
+.main-button:hover {
+	color: inherit;
+	background: $hover-color;
+}
+
+.bottom-menu {
+	margin-top: 6px;
+	display: inline-block;
+	float: left;
+	a {
+		color: inherit;
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: $font-bold;
+		padding-left: 0px !important;
+	}
+	a:hover {
+		color: $hover-color;
+	}
+}
+
+.bottom-menu.social-icons {
+	display: inline-block;
+	float: right;
+	a {
+		padding-right: 0px !important;
+		font-size: 14px;
+		position: relative;
+		bottom: 3px;
+	}
+}

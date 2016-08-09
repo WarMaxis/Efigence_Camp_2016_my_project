@@ -6,7 +6,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>efi3 Strona logowania</title>
+	<title>Strona logowania</title>
 
 	<link rel="icon" href="assets/img/logo.png">
 
@@ -19,46 +19,60 @@
 <body>
 
 	<main>
-		<div class="row">
-			<div class="small-12 medium-3 columns">
-				<div class="logo-container">
-					<img src="assets/img/logo_vector.svg" alt="Logo">
-				</div>
-			</div>
-			<div class="small-10 medium-6 small-centered columns end">
-				<div class="login-box">
-					<header>
-						<h1>Login</h1>
-						<h2>Aby zaimportować dane, zaloguj się do swojego banku.</h2>
-					</header>
-					<section>
-						<div class="login-space">
-							<div class="user-photo"></div>
-							<form>
-								<p class="login-number">127633223</p>
-								<i></i>
-								<input type="password">
-								<i></i>
-								<button>Select other</button>
-								<input type="submit">
-							</form>
+		<div class="main-container">
+			<div class="inner-container row">
+				<div class="small-12 medium-3 columns">
+					<a href="#">
+						<div class="logo-container">
+							<img src="assets/img/logo_vector.svg" alt="Logo" title="Logo">
 						</div>
-					</section>
+					</a>
 				</div>
-				<nav>
-					<ul>
-						<li>
-							<a href="#">Security</a>
-						</li>
-						<li>
-							<a href="#">Log in</a>
-						</li>
-						<li>
-							<a href="#">Contact</a>
-						</li>
-					</ul>
-					<i></i>
-				</nav>
+				<div class="small-10 medium-6 small-centered columns end">
+					<div class="login-box">
+						<header>
+							<h1>Login</h1>
+							<h2>Aby zaimportować dane, zaloguj się do swojego banku.</h2>
+						</header>
+						<section>
+							<div class="user-photo"></div>
+							<div class="login-space">
+								<form>
+									<p class="login-number">
+										<strong>127633223</strong>
+										<i id="clear-login" class="fa fa-times"></i>
+									</p>
+									<div class="password-input">
+										<input type="password">
+										<i id="keyboard-activate" class="fa fa-keyboard-o"></i>
+									</div>
+									<button class="other-button">Select other</button>
+									<input class="main-button" type="submit" value="GO">
+								</form>
+							</div>
+						</section>
+					</div>
+					<nav>
+						<ul class="bottom-menu menu">
+							<li>
+								<a href="#">Security</a>
+							</li>
+							<li>
+								<a href="#">Log in</a>
+							</li>
+							<li>
+								<a href="#">Contact</a>
+							</li>
+						</ul>
+						<ul class="bottom-menu social-icons menu">
+							<li>
+								<a target="_blank" href="https://www.facebook.com/efigence/">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
 	</main>
