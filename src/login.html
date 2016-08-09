@@ -8,46 +8,80 @@
 
 	<title>Strona logowania</title>
 
+	<link rel="icon" href="assets/img/logo.png">
+
 	<link rel="stylesheet" href="assets/css/app.css">
+
+	<!-- Font Awesome Stylesheet -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 </head>
 
 <body>
 
 	<main>
-		<section class="login_wrapper">
-			<div class="row">
-				<div class="small-10 small-centered columns">
-					<div class="row">
-						<div class="small-12 medium-3 columns">
-							<div class="logo_container">
-								<a href="#">
-									<img class="logo" src="assets/img/logo_vector.svg">
-								</a>
-							</div>
+		<div class="main-container">
+			<div class="inner-container row">
+				<div class="small-10 medium-3 small-centered medium-uncentered columns">
+					<a href="#">
+						<div class="logo-container">
+							<img src="assets/img/logo_vector.svg" alt="Logo" title="Logo">
 						</div>
-						<div class="login_place small-12 medium-6 medium-centered columns">
-							<div class="login_header">
-								<h1>Login</h1>
-								<span>Aby zaimportować dane zaloguj się do swojego banku</span>
+					</a>
+				</div>
+				<div class="small-10 medium-6 small-centered columns end">
+					<div class="login-box">
+						<header>
+							<h1>Login</h1>
+							<h2>Aby zaimportować dane, zaloguj się do swojego banku.</h2>
+						</header>
+						<section>
+							<div class="user-photo"></div>
+							<div class="login-space">
+								<form>
+									<p class="login-number">
+										<strong>127633223</strong>
+										<i id="clear-login" class="fa fa-times"></i>
+									</p>
+									<p class="login-number-tip">Wpisz swój numer użytkownika</p>
+									<input class="login-number-input" type="text">
+									<div class="password-input">
+										<input type="password">
+										<i id="keyboard-activate" class="fa fa-keyboard-o"></i>
+									</div>
+									<button class="other-button">Select other</button>
+									<input class="main-button" type="submit" value="GO">
+								</form>
 							</div>
-							<img class="user_photo" src="assets/img/user_photo.png">
-							<span class="user_id"><strong>127633223</strong></span>
-							<form>
-								<input id="password" type="text">
-								<button id="change">SELECT OTHER</button>
-								<button id="submit">GO</button>
-							</form>
-						</div>
-						<div class="small-12 medium-3 columns"></div>
+						</section>
 					</div>
+					<nav>
+						<ul class="bottom-menu menu">
+							<li>
+								<a href="#">Security</a>
+							</li>
+							<li>
+								<a href="#">Log in</a>
+							</li>
+							<li>
+								<a href="#">Contact</a>
+							</li>
+						</ul>
+						<ul class="bottom-menu social-icons menu">
+							<li>
+								<a target="_blank" href="https://www.facebook.com/efigence/">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
-		</section>
+		</div>
 	</main>
 
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/what-input.min.js"></script>
 	<script src="assets/js/foundation.min.js"></script>
+	<script src="assets/js/what-input.min.js"></script>
 	<script src="assets/js/app.js"></script>
 </body>
 
