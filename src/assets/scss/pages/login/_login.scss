@@ -22,6 +22,7 @@ h2 {
 
 .main-container {
 	height: 100vh;
+	min-height: 660px;
 	background-image: url("../img/background_login_page.jpg");
 	background-position: center center;
 	background-size: 100% 100%;
@@ -30,4 +31,13 @@ h2 {
 
 .inner-container {
 	padding-top: 5vh;
+}
+
+@media (max-width: 640px) {
+	.end {
+		float: none !important;
+	}
+	.main-container {
+		min-height: 850px;
+	}
 }

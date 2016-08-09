@@ -23,3 +23,9 @@
 	color: inherit;
 	background: $hover-color;
 }
+
+@media (max-width: 380px) {
+	.main-button {
+		width: 60px;
+	}
+}

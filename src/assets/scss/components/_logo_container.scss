@@ -9,3 +9,20 @@
 	border: 3px solid rgba(255, 255, 255, 0.3);
 	border-radius: 6px;
 }
+
+@media (max-width: 768px) {
+	.logo-container {
+		width: 80px;
+		height: 80px;
+		img {
+			height: 37px;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.logo-container {
+		float: none;
+		margin-bottom: 35px;
+	}
+}
