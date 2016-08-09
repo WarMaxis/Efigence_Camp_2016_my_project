@@ -1,0 +1,25 @@
+// Buttons
+.other-button {
+	text-transform: uppercase;
+	font-size: 15px;
+	margin-right: 8px;
+}
+
+.main-button {
+	color: $font-secondary-color;
+	background: $primary-buttons-color;
+	border: none;
+	width: 120px;
+	height: 30px;
+	border-radius: 3px;
+	margin-left: 8px;
+}
+
+.other-button:hover {
+	color: $hover-color;
+}
+
+.main-button:hover {
+	color: inherit;
+	background: $hover-color;
+}

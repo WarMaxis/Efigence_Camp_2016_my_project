@@ -1,0 +1,11 @@
+// Logo container
+.logo-container {
+	width: 160px;
+	height: 160px;
+	float: right;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	border-radius: 6px;
+}
