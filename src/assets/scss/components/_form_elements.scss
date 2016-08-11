@@ -91,6 +91,26 @@
 	}
 }
 
+.alert.callout {
+	padding-bottom: 0px;
+	padding-top: 5px;
+	width: 100%;
+	margin: 0 auto 1rem auto;
+	background-color: #F04124;
+	color: #ffffff;
+	display: none;
+	p {
+		margin-bottom: 5px;
+	}
+	button {
+		top: 0;
+		color: #91392B;
+	}
+	button:hover {
+		color: #ffffff;
+	}
+}
+
 @media (max-width: 768px) {
 	.password-input {
 		input {
