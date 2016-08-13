@@ -20,20 +20,28 @@ function sendPassword(pass) {
 
 $(document).on('ready', function () {
 	$('#clear-login').on('click', function () {
-		$('.login-number, .password-input, .wrong-password').hide();
-		$('.user-photo').fadeTo(0, 0);
-		$('.login-number-input, .login-number-tip').show();
+
 	});
 
 	$('.main-button').on('click', function (event) {
 		event.preventDefault();
-		var password = $('#password').val();
-		if ($('#password').is(':visible')) {
-			if (!password.length) {
-				$('.wrong-password').show();
-			} else {
-				sendPassword(password);
+
+		if ($('.login-number-input').length) {
+			var login = $('.login-number-input').val();
+			$('.login-number-tip, .login-number-input').hide();
+			$('.login-number, .password-input').show();
+			$('.user-photo').css('visibility', 'visible');
+			$('.login-string').html(login);
+
+		} else {
+			var password = $('#password').val();
+			if ($('#password').is(':visible')) {
+				if (!password.length) {
+					$('.wrong-password').show();
+				} else {
+					sendPassword(password);
+				}
 			}
-		}
+		};
 	});
 });

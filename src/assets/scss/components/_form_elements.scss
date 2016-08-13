@@ -8,6 +8,7 @@
 }
 
 .user-photo {
+	visibility: hidden;
 	width: 94px;
 	height: 94px;
 	margin: 40px auto 0 auto;
@@ -22,11 +23,11 @@
 }
 
 .login-number {
+	display: none;
 	font-size: 18px;
 }
 
 .login-number-tip {
-	display: none;
 	font-size: 18px;
 }
 
@@ -64,11 +65,12 @@
 }
 
 .login-number-input {
-	display: none;
 	max-width: 90%;
 	border-radius: 3px;
 	font-size: 18px;
 	text-align: center;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .login-number-input:focus {
@@ -77,6 +79,7 @@
 }
 
 .password-input {
+	display: none;
 	margin: 0px 5% 6px 5%;
 	input {
 		display: inline-block;
