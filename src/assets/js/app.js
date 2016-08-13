@@ -1,3 +1,4 @@
+// Brak wprowadzenia loginu
 function emptyLogin() {
 	$('.wrong-password').show();
 	$('.alert').css('background-color', '#F08A24');
@@ -8,6 +9,7 @@ function emptyLogin() {
 	});
 }
 
+// Użytkownik wprowadził login
 function goToPassword() {
 	var login = $('.login-number-input').val();
 
@@ -18,10 +20,12 @@ function goToPassword() {
 	$('.login-string').html(login);
 }
 
-function clearPassword() {
+// Usunięcie wpisanego loginu
+function clearLogin() {
 	$('.other-button').click();
 }
 
+// Brak wprowadzenia hasła
 function emptyPassword() {
 	$('.wrong-password').show();
 	$('.alert').css('background-color', '#F08A24');
@@ -32,11 +36,8 @@ function emptyPassword() {
 	});
 }
 
-function goodPassword() {
-	location.href = 'index.html';
-}
-
-function sendPassword(log, pass) {
+// Wysłanie loginu i hasła poprzez AJAX
+function sendData(log, pass) {
 	$.ajax({
 		type: "post",
 		data: {
@@ -46,6 +47,8 @@ function sendPassword(log, pass) {
 		url: "https://efigence-camp.herokuapp.com/api/login",
 		error: function (response) {
 			console.log(response.responseText);
+
+			// Pobranie wiadomości o błędzie z API
 			var alertMessage = jQuery.parseJSON(response.responseText);
 
 			$('.wrong-password').show();
@@ -58,19 +61,34 @@ function sendPassword(log, pass) {
 		},
 		success: function (response) {
 			console.log("succes", response);
-			goodPassword();
+
+			// Przekierowanie na stronę dashboardu
+			location.href = 'dashboard.html';
 		}
 	});
 }
 
 $(document).on('ready', function () {
-	$('#clear-login').on('click', function () {
-		clearPassword();
+
+	// Dodanie obsługi pola input poprzez klawisz Enter
+	$('.login-number-input, #password').keypress(function (e) {
+		var key = e.which;
+		if (key == 13) {
+			$('.main-button').click();
+			return false;
+		}
 	});
 
+	// Wywołanie usunięcia wpisanego loginu
+	$('#clear-login').on('click', function () {
+		clearLogin();
+	});
+
+	// Event click na głównym buttonie
 	$('.main-button').on('click', function (event) {
 		event.preventDefault();
 
+		// Walidacja wpisania loginu
 		if ($('.login-number-input').is(':visible')) {
 			var login = $('.login-number-input').val();
 
@@ -78,8 +96,16 @@ $(document).on('ready', function () {
 				emptyLogin();
 			} else {
 				goToPassword();
+
+				if ($('.wrong-password').is(':visible')) {
+					$('.wrong-password').hide();
+				}
+
+				// Auto focus na input
+				$('#password').focus();
 			};
 
+			// Walidacja wpisania hasła i wywołanie AJAXa
 		} else {
 			var login = $('.login-number-input').val();
 			var password = $('#password').val();
@@ -87,7 +113,7 @@ $(document).on('ready', function () {
 			if (!password.length) {
 				emptyPassword();
 			} else {
-				sendPassword(login, password);
+				sendData(login, password);
 			};
 		};
 	});
