@@ -22,12 +22,12 @@
 	border-radius: 50%;
 }
 
-.login-number {
+.login {
 	display: none;
 	font-size: 18px;
 }
 
-.login-number-tip {
+.login-tip {
 	font-size: 18px;
 }
 
@@ -64,7 +64,7 @@
 	color: $hover-color;
 }
 
-.login-number-input {
+.login-input {
 	max-width: 90%;
 	border-radius: 3px;
 	font-size: 18px;
@@ -73,7 +73,7 @@
 	margin-right: 5%;
 }
 
-.login-number-input:focus {
+.login-input:focus {
 	outline: none;
 	border: 2px solid $hover-color;
 }

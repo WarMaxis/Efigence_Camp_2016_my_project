@@ -4,17 +4,17 @@ function emptyLogin() {
 	$('.alert').css('background-color', '#F08A24');
 	$('.alert-text').html('Wprowadź swój login');
 
-	$('.login-number-input').on('click', function () {
+	$('.login-input').on('click', function () {
 		$('.wrong-password').hide();
 	});
 }
 
 // Użytkownik wprowadził login
 function goToPassword() {
-	var login = $('.login-number-input').val();
+	var login = $('.login-input').val();
 
-	$('.login-number-tip, .login-number-input').hide();
-	$('.login-number, .password-input, .other-button').show();
+	$('.login-tip, .login-input').hide();
+	$('.login, .password-input, .other-button').show();
 	$('.user-photo').css('visibility', 'visible');
 
 	$('.login-string').html(login);
@@ -71,7 +71,7 @@ function sendData(log, pass) {
 $(document).on('ready', function () {
 
 	// Dodanie obsługi pola input poprzez klawisz Enter
-	$('.login-number-input, #password').keypress(function (e) {
+	$('.login-input, #password').keypress(function (e) {
 		var key = e.which;
 		if (key == 13) {
 			$('.main-button').click();
@@ -89,8 +89,8 @@ $(document).on('ready', function () {
 		event.preventDefault();
 
 		// Walidacja wpisania loginu
-		if ($('.login-number-input').is(':visible')) {
-			var login = $('.login-number-input').val();
+		if ($('.login-input').is(':visible')) {
+			var login = $('.login-input').val();
 
 			if (login == 0) {
 				emptyLogin();
@@ -107,7 +107,7 @@ $(document).on('ready', function () {
 
 			// Walidacja wpisania hasła i wywołanie AJAXa
 		} else {
-			var login = $('.login-number-input').val();
+			var login = $('.login-input').val();
 			var password = $('#password').val();
 
 			if (!password.length) {
