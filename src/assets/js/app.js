@@ -58,6 +58,12 @@ function sendData(log, pass) {
 			$('#password').on('click', function () {
 				$('.wrong-password').slideUp(500);
 			});
+
+			// Animacja Shake całego login-box
+			$('.login-box').addClass('animate');
+			setTimeout(function () {
+				$('.login-box').removeClass('animate');
+			}, 850);
 		},
 		success: function (response) {
 			console.log("succes", response);
