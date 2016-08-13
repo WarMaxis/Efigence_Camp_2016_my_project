@@ -1,11 +1,11 @@
 // Brak wprowadzenia loginu
 function emptyLogin() {
-	$('.wrong-password').show();
+	$('.wrong-password').slideDown(500);
 	$('.alert').css('background-color', '#F08A24');
 	$('.alert-text').html('Wprowadź swój login');
 
 	$('.login-input').on('click', function () {
-		$('.wrong-password').hide();
+		$('.wrong-password').slideUp(500);
 	});
 }
 
@@ -27,12 +27,12 @@ function clearLogin() {
 
 // Brak wprowadzenia hasła
 function emptyPassword() {
-	$('.wrong-password').show();
+	$('.wrong-password').slideDown(500);
 	$('.alert').css('background-color', '#F08A24');
 	$('.alert-text').html('Wprowadź swoje hasło');
 
 	$('#password').on('click', function () {
-		$('.wrong-password').hide();
+		$('.wrong-password').slideUp(500);
 	});
 }
 
@@ -51,12 +51,12 @@ function sendData(log, pass) {
 			// Pobranie wiadomości o błędzie z API
 			var alertMessage = jQuery.parseJSON(response.responseText);
 
-			$('.wrong-password').show();
+			$('.wrong-password').slideDown(500);
 			$('.alert').css('background-color', '#F04124');
 			$('.alert-text').html(alertMessage.message);
 
 			$('#password').on('click', function () {
-				$('.wrong-password').hide();
+				$('.wrong-password').slideUp(500);
 			});
 		},
 		success: function (response) {
@@ -98,7 +98,7 @@ $(document).on('ready', function () {
 				goToPassword();
 
 				if ($('.wrong-password').is(':visible')) {
-					$('.wrong-password').hide();
+					$('.wrong-password').slideUp(500);
 				}
 
 				// Auto focus na input
