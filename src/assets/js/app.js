@@ -16,31 +16,49 @@ function goToPassword() {
 	$('.user-photo').css('visibility', 'visible');
 
 	$('.login-string').html(login);
-	$('.login-number-input').val('');
 }
 
 function clearPassword() {
-	$('.login-number-tip, .login-number-input').show();
-	$('.login-number, .password-input, .other-button').hide();
-	$('.user-photo').css('visibility', 'hidden');
+	$('.other-button').click();
 }
 
-function sendPassword(pass) {
+function emptyPassword() {
+	$('.wrong-password').show();
+	$('.alert').css('background-color', '#F08A24');
+	$('.alert-text').html('Wprowadź swoje hasło');
+
+	$('#password').on('click', function () {
+		$('.wrong-password').hide();
+	});
+}
+
+function goodPassword() {
+	location.href = 'index.html';
+}
+
+function sendPassword(log, pass) {
 	$.ajax({
 		type: "post",
 		data: {
-			login: "efi",
+			login: log,
 			password: pass
 		},
 		url: "https://efigence-camp.herokuapp.com/api/login",
 		error: function (response) {
 			console.log(response.responseText);
 			var alertMessage = jQuery.parseJSON(response.responseText);
+
 			$('.wrong-password').show();
+			$('.alert').css('background-color', '#F04124');
 			$('.alert-text').html(alertMessage.message);
+
+			$('#password').on('click', function () {
+				$('.wrong-password').hide();
+			});
 		},
 		success: function (response) {
 			console.log("succes", response);
+			goodPassword();
 		}
 	});
 }
@@ -63,12 +81,13 @@ $(document).on('ready', function () {
 			};
 
 		} else {
+			var login = $('.login-number-input').val();
 			var password = $('#password').val();
 
 			if (!password.length) {
-				$('.wrong-password').show();
+				emptyPassword();
 			} else {
-				sendPassword(password);
+				sendPassword(login, password);
 			};
 		};
 	});
