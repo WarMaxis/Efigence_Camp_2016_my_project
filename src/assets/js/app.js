@@ -104,7 +104,7 @@ $(document).on('ready', function () {
 				goToPassword();
 
 				if ($('.wrong-password').is(':visible')) {
-					$('.wrong-password').slideUp(500);
+					$('.wrong-password').hide();
 				}
 
 				// Auto focus na input
