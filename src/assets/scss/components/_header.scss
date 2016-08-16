@@ -1,0 +1,33 @@
+// Header
+.header-container {
+	height: 120px;
+	background-color: $primary-background-color;
+	padding-top: 15px;
+}
+
+.logo-user-container {
+	display: flex;
+}
+
+.logo-dashboard-container {
+	width: 90px;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	border-radius: 6px;
+	img {
+		height: 40px;
+	}
+}
+
+.user-dashboard-photo {
+	width: 90px;
+	height: 90px;
+	background-image: url("../img/user_dashboard_photo.jpg");
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-radius: 6px;
+}

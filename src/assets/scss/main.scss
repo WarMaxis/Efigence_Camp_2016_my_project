@@ -7,8 +7,12 @@
 @import "components/buttons";
 @import "components/form_elements";
 @import "components/logo_container";
+@import "components/header";
 
 // Strona logowania
 @import "pages/login/box";
 @import "pages/login/login";
 @import "pages/login/login_nav";
+
+// Dashboard
+@import "pages/dashboard/dashboard";
