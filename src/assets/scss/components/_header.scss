@@ -3,6 +3,7 @@
 	height: 120px;
 	background-color: $primary-background-color;
 	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .logo-user-container {
@@ -30,4 +31,42 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	border-radius: 6px;
+}
+
+.user-details {
+	h2 {
+		font-size: 26px;
+		text-align: left;
+		padding: 0;
+	}
+	i {
+		float: left;	
+	}
+}
+
+.user-details:nth-child(3) {
+	margin-left: 20px;	
+}
+
+.dashboard-menu {
+	text-align: left;
+	margin-top: -15px;
+	height: 120px;
+	ul {
+		margin: 0;
+		height: 120px;
+		li {
+			display: inline-block;
+			height: 120px;
+			padding-top: 65px;
+			width: 90px;
+			text-align: center;
+			a {
+				color: #ffffff;
+			}
+		}
+		li:hover {
+			background-color: #000000;	
+		}
+	}
 }
