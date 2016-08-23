@@ -1,1 +1,76 @@
 // Header
+
+.header-container {
+	height: 100px;
+	background-color: $primary-background-color;
+	text-align: left;
+	.row {
+		height: 100px;	
+	}
+}
+
+.header-logo-container {
+	height: 70px;
+	width: 70px;
+	margin-top: 15px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 4px;
+	text-align: center;
+	float: left;
+	img {
+		margin-top: 16px;
+		height: 34px;	
+	}
+}
+
+.header-user-photo {
+	height: 70px;
+	width: 70px;
+	border-radius: 4px;
+	float: left;
+	margin-top: 15px;
+	margin-left: 2px;
+	background-image: url("../img/user_dashboard_photo.jpg");
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.header-user-info {
+	overflow: hidden;
+	margin-top: 15px;
+	padding-left: 18px;
+	h2 {
+		text-align: left;
+		font-size: 22px;
+		padding-left: 0px;
+	}
+}
+
+.header-user-icons {
+	font-size: 18px !important;
+	padding-top: 5px;
+}
+
+
+.config-icon {
+	margin-left: 15px;
+}
+
+.header-menu {
+	li {
+		display: inline-block;
+		height: 100px;
+		a {
+			height: 100%;
+			display: block;
+			padding-top: 50px;
+			color: #ffffff;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		a:hover {
+			background-color: #000000;
+		}
+	}
+}
