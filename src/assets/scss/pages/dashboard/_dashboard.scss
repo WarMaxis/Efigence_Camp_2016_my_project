@@ -1,1 +1,39 @@
 // Dashboard
+.dashboard-main {
+	text-align: left;
+	color: #000000;
+	background-color: #D9DADA;
+	h1, h2 {
+		color: #000000;
+		text-align: left;
+		padding-left: 0;
+	}
+}
+
+.history {
+	height: 400px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	overflow-y: scroll;
+	font-size: 24px;
+	padding-top: 20px;
+}
+
+.history-date {
+	padding-left: 40px;	
+}
+
+.history-title {
+	padding-left: 40px;	
+}
+
+.history-price {
+	display: inline;
+	float: right;
+	margin-right: 20px;
+}
+
+.history-line {
+	padding-bottom: 15px;
+	border-bottom: 2px solid #D9DADA;
+}
