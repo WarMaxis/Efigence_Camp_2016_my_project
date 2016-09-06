@@ -1,0 +1,56 @@
+// Dashboard
+.budgets-main {
+	text-align: left;
+	color: #000000;
+	background-color: #D9DADA;
+	h1, h2 {
+		color: #000000;
+		text-align: left;
+		padding-left: 0;
+	}
+}
+
+.circle-row {
+	margin-bottom: 25px;	
+}
+
+.circle {
+	border-radius: 50%;
+	background-color: coral;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.circle-content {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	background-color: lightgray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.first-circle {
+	background-color: deepskyblue;
+}
+
+.second-circle {
+	background-color: goldenrod;
+}
+
+.third-circle {
+	background-color: deepskyblue;
+}
+
+.fourth-circle {
+	background-color: deeppink;
+}
+
+.fifth-circle {
+	background-color: deepskyblue;
+}
